@@ -1,14 +1,22 @@
-﻿Musica musica1 = new Musica();
-musica1.Nome = "minh_musica";
-musica1.Artista = "Vitor";
-musica1.Duracao = 273;
-musica1.Disponivel = true;
-Console.WriteLine(musica1.DescricaoResumida); 
-musica1.ExibirFichaTecnica();
+﻿Album albumDoQueen = new Album();
 
-Musica musica2 =  new Musica();
-musica2.Nome = "musica_Fidel";
-musica2.Artista = "Fidel";
-musica2.Duracao = 367;
-musica2.Disponivel = false;
-musica2.ExibirFichaTecnica();
+albumDoQueen.Nome = "A night at the opera";
+
+Musica musica1 = new()
+{
+    Nome = "Love of my life",
+    Duracao = 345
+};
+
+
+Musica musica2 = new()
+{
+    Nome = "Bohemian Rhapsody",
+    Duracao = 200
+
+};
+
+albumDoQueen.AdicionarMusica(musica1);
+albumDoQueen.AdicionarMusica(musica2);
+
+albumDoQueen.ExibirMusicasDoAlbum();
