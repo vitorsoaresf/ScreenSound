@@ -1,15 +1,18 @@
-﻿Album albumDoQueen = new Album();
+﻿Banda banda = new();
+banda.Nome = "Queen";
+
+Album albumDoQueen = new Album();
 
 albumDoQueen.Nome = "A night at the opera";
 
-Musica musica1 = new()
+Musica musica1 = new(banda)
 {
     Nome = "Love of my life",
     Duracao = 345
 };
 
 
-Musica musica2 = new()
+Musica musica2 = new(banda)
 {
     Nome = "Bohemian Rhapsody",
     Duracao = 200
@@ -19,4 +22,5 @@ Musica musica2 = new()
 albumDoQueen.AdicionarMusica(musica1);
 albumDoQueen.AdicionarMusica(musica2);
 
-albumDoQueen.ExibirMusicasDoAlbum();
+banda.AdicionarAlbum(albumDoQueen);
+banda.ExibirDiscrografia();
